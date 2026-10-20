@@ -1,0 +1,17 @@
+spring:
+ datasource:
+  url: ${DB_URL:jdbc:mysql://localhost:3306/stocksense?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true}
+  username: ${DB_USERNAME:stocksense}
+  password: ${DB_PASSWORD:stocksense}
+ jpa:
+  hibernate:
+   ddl-auto: update
+  open-in-view: false
+server:
+ port: 8081
+razorpay:
+ key-id: ${RAZORPAY_KEY_ID:}
+ key-secret: ${RAZORPAY_KEY_SECRET:}
+sendgrid:
+ api-key: ${SENDGRID_API_KEY:}
+ from: ${SENDGRID_FROM:}

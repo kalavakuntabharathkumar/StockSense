@@ -29,3 +29,14 @@ Open `http://localhost:4200`.
 cd backend && mvn test
 ```
 The sample dataset includes a small retail catalog. Metrics in the project brief describe the intended demonstration scenario and should be independently measured before being presented as production results.
+
+
+## REST API reference (18 routes)
+
+- `GET /api/products`, `POST /api/products`, `GET /api/products/{id}`, `PUT /api/products/{id}`, `DELETE /api/products/{id}`
+- `GET /api/products/sku/{sku}`, `PATCH /api/products/{id}/stock`, `POST /api/products/bulk`, `GET /api/products/count`
+- `GET /api/products/low-stock`, `GET /api/dashboard/summary`, `GET /api/reports/stock-value`, `GET /api/reports/low-stock`
+- `GET /api/alerts/preview`, `POST /api/alerts/low-stock`, `GET /api/integrations/status`
+- `POST /api/payments/orders`, `GET /api/payments/configuration`
+
+OpenAPI is generated from the Spring MVC controller annotations and is available at `/v3/api-docs`; Swagger UI is available at `/swagger-ui.html`.

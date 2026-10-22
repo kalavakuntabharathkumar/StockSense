@@ -1,0 +1,59 @@
+{
+  "info": {
+    "name": "StockSense API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8081"
+    }
+  ],
+  "item": [
+    {
+      "name": "List products",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/products"
+      }
+    },
+    {
+      "name": "Dashboard summary",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/dashboard/summary"
+      }
+    },
+    {
+      "name": "Low stock products",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/products/low-stock"
+      }
+    },
+    {
+      "name": "Integration status",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/integrations/status"
+      }
+    },
+    {
+      "name": "Create payment order (test mode)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\": 499, \"currency\": \"INR\"}"
+        },
+        "url": "{{baseUrl}}/api/payments/orders"
+      }
+    }
+  ]
+}
